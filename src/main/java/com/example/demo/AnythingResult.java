@@ -4,10 +4,10 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.google.gson.annotations.SerializedName;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Anything {
+public class AnythingResult {
 	private String data;
 	private Headers headers;
-	private String json;
+	private Anything json;
 	private String method;
 	private String origin;
 	private String url;
@@ -34,7 +34,11 @@ public class Anything {
                 + "  headers >> Referer: " + headers.referer + "\n"
                 + "  headers >> User-Agent: " + headers.userAgent + "\n";
     }
+    public String toString2() {
+		return this.json.toString();
+	}
 	
+
 	public String getData() {
 		return data;
 	}
@@ -47,10 +51,10 @@ public class Anything {
 	public void setHeaders(Headers headers) {
 		this.headers = headers;
 	}
-	public String getJson() {
+	public Anything getJson() {
 		return json;
 	}
-	public void setJson(String json) {
+	public void setJson(Anything json) {
 		this.json = json;
 	}
 	public String getMethod() {
