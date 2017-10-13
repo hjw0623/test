@@ -5,10 +5,6 @@ import com.google.gson.annotations.SerializedName;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Anything {
-	private Object[] args;
-	private Object[] files;
-	private Object[] form;
-	
 	private String data;
 	private Headers headers;
 	private String json;
@@ -40,23 +36,23 @@ public class Anything {
     }
 
 	class Headers {
-//		@SerializedName("Accept")
+		@SerializedName("Accept")
 		String accept;
-//		@SerializedName("Accept-Encoding")
+		@SerializedName("Accept-Encoding")
 		String acceptEncoding;
-//		@SerializedName("Accept-Language")
+		@SerializedName("Accept-Language")
 		String acceptLanguage;
-//		@SerializedName("Connection")
+		@SerializedName("Connection")
 		String connection;
-//		@SerializedName("Cookie")
+		@SerializedName("Cookie")
 		String cookie;
 		
-//		@SerializedName("Host")
+		@SerializedName("Host")
 		String host;
-//		@SerializedName("Referer")
+		@SerializedName("Referer")
 		String referer;
 		
-//		@SerializedName("User-Agent")
+		@SerializedName("User-Agent")
 		String userAgent;
 		
 		Headers(){}
